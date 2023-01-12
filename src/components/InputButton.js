@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 // import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import Button from '../components/Button'
 
 //Images
 import Coffee from '../images/coffee.jpg'
@@ -16,40 +17,41 @@ const [input1, setInput1] = useState('');
 const [input2, setInput2] = useState('');
 
   return (
-    <div>
-      <div className='text-right'><AddCircleOutlineIcon sx={{fontSize: 30}} className='cursor-pointer' onClick={() => setDropdownVisible(!isDropdownVisible)} /></div>
+    <div className='bg-neutral-900'>
+      <span className='fixed z-50 p-4 text-white'>Logo</span>
+      <div className='text-right fixed right-0 z-50'><AddCircleOutlineIcon sx={{fontSize: 35, strokeWidth: 4}} className='cursor-pointer bg-yellow-600 h-14 rounded-3xl abso p-1 m-2' onClick={() => setDropdownVisible(!isDropdownVisible)} /></div>
       {isDropdownVisible && (
-        <div className='flex flex-col bg-gray-200 p-4 rounded-lg gap-5'>
+        <div className='flex flex-col bg-neutral-900 p-4 rounded-lg gap-2 fixed top-0 right-0 z-40'>
 
-        <h2 className='text-2xl font-medium mb-4'>Create Image</h2>
+        <h2 className='text-2xl font-medium mb-4 text-white'>Create Image</h2>
 
-            <img className='w-full h-64 rounded-lg' src={Coffee} />
+            {/* <img className='w-full h-2/3 rounded-lg' src={Coffee} /> */}
 
-            <AddAPhotoIcon className='mb-4'/>
+            <span className='text-white text-center'>Upload Image<AddAPhotoIcon className='mb-4 text-white'/></span>
 
           <input
-            className='bg-gray-100 p-2 rounded-lg mb-4'
+            className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Cafe Name"
             value={input1}
             onChange={e => setInput1(e.target.value)}
           />
 
           <input
-            className='bg-gray-100 p-2 rounded-lg mb-4'
+            className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Location"
             value={input2}
             onChange={e => setInput2(e.target.value)}
           />
 
           <input
-            className='bg-gray-100 p-2 rounded-lg mb-4'
+            className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Coffee"
             value={input2}
             onChange={e => setInput2(e.target.value)}
           />
 
           <input
-            className='bg-gray-100 p-2 rounded-lg mb-4'
+            className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Price"
             value={input2}
             onChange={e => setInput2(e.target.value)}
