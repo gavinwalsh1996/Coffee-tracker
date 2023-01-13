@@ -10,7 +10,7 @@ import { CollectionsOutlined } from '@mui/icons-material'
 
 
 
-function userProfile({images, getItem, favourites}) {
+function userProfile({images, getItem, favourites, removeFavourite}) {
 
 
   return (
@@ -20,7 +20,7 @@ function userProfile({images, getItem, favourites}) {
       {/* <ImageCard /> */}
       <div className='flex flex-col'>
       <ImageGrid favourites={favourites} />
-      <ProductCard images={images} getItem={getItem}/>
+      <ProductCard images={images} getItem={getItem} removeFavourite={removeFavourite} favourites={favourites}/>
       <Toolbar />
       </div>
     </div>

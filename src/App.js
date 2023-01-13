@@ -48,12 +48,16 @@ const images = [
 
 function App() {
 
-  //set Favourites
+  //Set Favourites
   const [favourites, setFavourites] = useState([]);
 
   // Get items for favourites 
   function getItem (item) {
     setFavourites([...favourites, item])
+  }
+
+  function removeFavourite(item) {
+    setFavourites(favourites.filter((fav => fav !== item)));
   }
 
   return (
@@ -62,7 +66,7 @@ function App() {
    <Router>
     <Routes>
       <Route path='/' element={<LoginPage/>} />
-      <Route path='/profile' element={<UserProfile images={images} getItem={getItem} favourites={favourites} /> } />
+      <Route path='/profile' element={<UserProfile images={images} getItem={getItem} favourites={favourites} removeFavourite={removeFavourite} /> } />
     </Routes>
   </Router>
    

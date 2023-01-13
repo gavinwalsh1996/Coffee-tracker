@@ -1,7 +1,7 @@
 import React from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const ProductCard = ({images, getItem}) => {
+const ProductCard = ({images, getItem, favourites, removeFavourite}) => {
 
 
 
@@ -18,7 +18,10 @@ const ProductCard = ({images, getItem}) => {
                 </div>
             <div className='flex justify-between'>
               <h3 className="text-lg font-medium">{item.cafe}</h3>
-              <h3 className="text-lg font-medium" onClick={() => getItem(item, index)}><FavoriteIcon sx={{ stroke: "yellow", strokeWidth: 1 }} className="text-red-600 text-xl"/></h3>
+              <h3 className="text-lg font-medium" onClick={() => favourites.includes(item) ? removeFavourite(item) : getItem(item)}>
+                <FavoriteIcon sx={{ stroke: favourites.includes(item) ? "yellow" : "none", strokeWidth: 1 }} className={favourites.includes(item) ? "text-red-600 text-xl" : "text-gray-600 text-xl"} />
+              </h3>
+
             </div>
               
               <h3 className="text-sm font-medium text-white">{item.price}</h3>

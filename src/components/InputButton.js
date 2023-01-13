@@ -14,7 +14,9 @@ function InputButton() {
 //State
 const [isDropdownVisible, setDropdownVisible] = useState(false);
 const [input1, setInput1] = useState('');
-const [input2, setInput2] = useState('');
+const [input2, setInput2] = useState('')
+const [input3, setInput3] = useState('')
+const [input4, setInput4] = useState('')
 
   return (
     <div className='bg-neutral-900'>
@@ -25,9 +27,11 @@ const [input2, setInput2] = useState('');
 
         <h2 className='text-2xl font-medium mb-4 text-white'>Create Image</h2>
 
-            {/* <img className='w-full h-2/3 rounded-lg' src={Coffee} /> */}
+        <label htmlFor='image'>
+          <span className='text-white text-center'>Upload Image<AddAPhotoIcon className='mb-4 text-white'/></span>
+          <input type='file' name='image' id='image' style={{display: 'none'}}/>
+        </label>
 
-            <span className='text-white text-center'>Upload Image<AddAPhotoIcon className='mb-4 text-white'/></span>
 
           <input
             className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
@@ -46,15 +50,15 @@ const [input2, setInput2] = useState('');
           <input
             className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Coffee"
-            value={input2}
-            onChange={e => setInput2(e.target.value)}
+            value={input3}
+            onChange={e => setInput3(e.target.value)}
           />
 
           <input
             className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Price"
-            value={input2}
-            onChange={e => setInput2(e.target.value)}
+            value={input4}
+            onChange={e => setInput4(e.target.value)}
           />
         
             <span className='text-center'>
