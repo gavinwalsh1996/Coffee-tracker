@@ -1,13 +1,13 @@
 import React from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const ProductCard = ({images, getItem, favourites, removeFavourite}) => {
+const ProductCard = ({imageFeed, getItem, favourites, removeFavourite}) => {
 
 
 
   return (
     <div className="flex flex-wrap mt-44 sm:mt-60 sm:pl-32 sm:pr-32">
-      {images.map((item, index) => ( 
+      {imageFeed.map((item, index) => ( 
         <div key={item.index} className="w-full sm:w-1/2 lg:w-1/3 p-4">
           <div className="rounded-lg shadow-md bg-neutral-900 text-white">
             <img src={item.img} alt="Product Image" className="w-full h-96 rounded-t-lg" />

@@ -10,17 +10,17 @@ import Toolbar from '../components/Toolbar'
 
 
 
-function userProfile({images, getItem, favourites, removeFavourite}) {
+function userProfile({imageFeed, getItem, favourites, removeFavourite, setImageFeed, handleUpload}) {
 
 
   return (
 
     <div className='bg-neutral-900'>
-      <InputButton />
+      <InputButton setImageFeed={setImageFeed} imageFeed={imageFeed} handleUpload={handleUpload} />
       {/* <ImageCard /> */}
       <div className='flex flex-col'>
       <ImageGrid favourites={favourites} />
-      <ProductCard images={images} getItem={getItem} removeFavourite={removeFavourite} favourites={favourites}/>
+      <ProductCard imageFeed={imageFeed} getItem={getItem} removeFavourite={removeFavourite} favourites={favourites}/>
       <Toolbar />
       </div>
     </div>

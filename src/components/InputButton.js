@@ -2,21 +2,56 @@ import React, { useState } from 'react';
 //Icons
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
-// import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-import Button from '../components/Button'
 
-//Images
-import Coffee from '../images/coffee.jpg'
 
-//Function
-function InputButton({handleUpload}) {
+function InputButton({handleUpload, setImageFeed, imageFeed}) {
 
 //State
 const [isDropdownVisible, setDropdownVisible] = useState(false);
+const [imageUpload, setImageUpload] = useState('');
 const [input1, setInput1] = useState('');
 const [input2, setInput2] = useState('')
 const [input3, setInput3] = useState('')
 const [input4, setInput4] = useState('')
+
+//Upload image function
+function uploadImage() {
+  const newItem =    {
+    type: input1,
+    cafe: input2,
+    location: input3,
+    price: input4,
+    img: imageUpload,
+  };
+
+
+  setImageFeed([newItem,...imageFeed]);
+  handleUpload(newItem)
+
+  clearInputs()
+
+  setTimeout(() => {
+    alert("Post uploaded succesfully!");
+    }, 1000);
+}
+
+//Clear inputs
+function clearInputs() {
+  setInput1('');
+  setInput2('');
+  setInput3('');
+  setInput4('');
+  setImageUpload('');
+}
+
+//Get uploaded image
+const handleFileSelect = (e) => {
+  let reader = new FileReader();
+  reader.onload = (event) => {
+    setImageUpload(event.target.result);
+  };
+  reader.readAsDataURL(e.target.files[0]);
+}
 
   return (
     <div className='bg-neutral-900'>
@@ -29,7 +64,7 @@ const [input4, setInput4] = useState('')
 
         <label htmlFor='image'>
           <span className='text-white text-center'>Upload Image<AddAPhotoIcon className='mb-4 text-white'/></span>
-          <input type='file' name='image' id='image' style={{display: 'none'}}/>
+          <input type='file' name='image' id='image' style={{display: 'none'}} onChange={handleFileSelect}/>
         </label>
 
 
@@ -43,15 +78,15 @@ const [input4, setInput4] = useState('')
           <input
             className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Location"
-            value={input2}
-            onChange={e => setInput2(e.target.value)}
+            value={input3}
+            onChange={e => setInput3(e.target.value)}
           />
 
           <input
             className='bg-neutral-900 border p-2 rounded-lg mb-4 text-white'
             placeholder="Coffee"
-            value={input3}
-            onChange={e => setInput3(e.target.value)}
+            value={input2}
+            onChange={e => setInput2(e.target.value)}
           />
 
           <input
@@ -62,8 +97,8 @@ const [input4, setInput4] = useState('')
           />
         
             <span className='text-center'>
-                <button className='bg-gray-500 text-white p-2 rounded-lg mr-2'>Clear</button>
-                <button className='bg-yellow-500 text-white p-2 rounded-lg'>Publish</button>
+                <button onClick={() => clearInputs()} className='bg-gray-500 text-white p-2 rounded-lg mr-2'>Clear</button>
+                <button onClick={() => uploadImage()} className='bg-yellow-500 text-white p-2 rounded-lg'>Publish</button>
             </span>
 
         </div>
