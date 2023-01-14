@@ -58,7 +58,7 @@ const handleFileSelect = (e) => {
   return (
     <div className='bg-neutral-900'>
       <span className='fixed z-50 p-4 text-white'>Logo</span>
-      <div className='text-right fixed right-0 z-50'><AddCircleOutlineIcon sx={{fontSize: 35, strokeWidth: 4}} className='cursor-pointer bg-yellow-600 h-14 rounded-3xl abso p-1 m-2' onClick={() => setDropdownVisible(!isDropdownVisible)} /></div>
+      <div className='text-right fixed right-0 z-50'><AddCircleOutlineIcon sx={{fontSize: 35, strokeWidth: 4}} className='cursor-pointer bg-orange-300 h-14 rounded-3xl abso p-1 m-2' onClick={() => setDropdownVisible(!isDropdownVisible)} /></div>
       {isDropdownVisible && (
         <div className='flex flex-col bg-neutral-900 p-4 rounded-lg gap-2 fixed top-0 right-0 z-40'>
 
@@ -100,7 +100,7 @@ const handleFileSelect = (e) => {
         
             <span className='text-center'>
                 <button onClick={() => clearInputs()} className='bg-gray-500 text-white p-2 rounded-lg mr-2'>Clear</button>
-                <button onClick={() => uploadImage()} className='bg-yellow-500 text-white p-2 rounded-lg'>Publish</button>
+                <button onClick={() => uploadImage()} className='bg-orange-300 text-white p-2 rounded-lg'>Publish</button>
             </span>
 
         </div>

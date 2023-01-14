@@ -3,6 +3,8 @@ import "@fontsource/syne"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import UserProfile from './pages/UserProfile'
+import SearchPage from './pages/SearchPage';
+import Toolbar from './components/Toolbar';
 
 //Images 
 import Coffee1 from './images/coffee.jpg'
@@ -82,11 +84,15 @@ function App() {
 
   return (
    <>
+
+   {/* <Toolbar /> */}
    
    <Router>
+   <Toolbar />
     <Routes>
       <Route path='/' element={<LoginPage/>} />
       <Route path='/profile' element={<UserProfile imageFeed={imageFeed} getItem={getItem} favourites={favourites} removeFavourite={removeFavourite} setImageFeed={setImageFeed} handleUpload={handleUpload} deletePost={deletePost}/> } />
+      <Route path='/search' element={<SearchPage/>} />
     </Routes>
   </Router>
    

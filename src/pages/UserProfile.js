@@ -21,7 +21,7 @@ function userProfile({imageFeed, getItem, favourites, removeFavourite, setImageF
       <div className='flex flex-col'>
       <ImageGrid favourites={favourites} />
       <ProductCard imageFeed={imageFeed} getItem={getItem} removeFavourite={removeFavourite} favourites={favourites} deletePost={deletePost}/>
-      <Toolbar />
+      {/* <Toolbar /> */}
       </div>
     </div>
     

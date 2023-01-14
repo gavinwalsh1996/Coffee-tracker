@@ -17,7 +17,7 @@ const ProductCard = ({imageFeed, getItem, favourites, removeFavourite, deletePos
               <div className="p-4">
                   <div className='flex justify-between'>
                       <h2 className="text-lg font-medium">{item.type}</h2>
-                      <h2 className="text-lg font-medium text-yellow-400">{item.location}</h2>
+                      <h2 className="text-lg font-medium text-orange-400">{item.location}</h2>
                   </div>
               <div className='flex justify-between'>
                 <h3 className="text-lg font-medium">{item.cafe}</h3>
@@ -33,6 +33,7 @@ const ProductCard = ({imageFeed, getItem, favourites, removeFavourite, deletePos
         ))
       ) : (
           <span className='text-white'>You have no posts.</span>
+
       )}
     </div>
   );
