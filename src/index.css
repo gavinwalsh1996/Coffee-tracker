@@ -16,5 +16,5 @@ code {
 @tailwind components;
 @tailwind utilities;
 
-body { font-family: "Syne", sans-serif; }
+body { font-family: "Syne", sans-serif; background-color: rgb(23 23 23);}
 

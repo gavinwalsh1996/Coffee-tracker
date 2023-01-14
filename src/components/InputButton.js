@@ -33,6 +33,8 @@ function uploadImage() {
   setTimeout(() => {
     alert("Post uploaded succesfully!");
     }, 1000);
+
+    setDropdownVisible(false)
 }
 
 //Clear inputs

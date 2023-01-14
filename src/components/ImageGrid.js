@@ -5,7 +5,7 @@ const ImageGrid = ({favourites}) => {
 
         <div className='fixed bg-neutral-900 w-full'>
             <p className='m-2 text-white text-center'>Favourites</p>
-            <div className="flex flex- justify-center ">
+            <div className="flex flex- justify-center">
             {favourites && favourites.length>0 ? 
                 favourites.map((item) => (
                     <div>
