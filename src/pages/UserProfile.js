@@ -6,7 +6,7 @@ import Button from '../components/Button'
 import ProductCard from '../components/ProductCard'
 import ImageGrid from '../components/ImageGrid'
 import Toolbar from '../components/Toolbar'
-import { CollectionsOutlined } from '@mui/icons-material'
+
 
 
 

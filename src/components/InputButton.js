@@ -9,7 +9,7 @@ import Button from '../components/Button'
 import Coffee from '../images/coffee.jpg'
 
 //Function
-function InputButton() {
+function InputButton({handleUpload}) {
 
 //State
 const [isDropdownVisible, setDropdownVisible] = useState(false);

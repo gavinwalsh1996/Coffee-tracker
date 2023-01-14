@@ -13,7 +13,7 @@ import Coffee4 from './images/coffee3.jpg'
 const images = [
   {
     type: 'peppermint Latte',
-    cafe: 'Starbucks',
+    cafe: 'Starbucks', 
     location: 'Barcelona',
     price: '$3',
     img: Coffee1,
