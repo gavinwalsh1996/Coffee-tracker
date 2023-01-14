@@ -10,7 +10,7 @@ const ImageGrid = ({favourites}) => {
                 favourites.map((item) => (
                     <div>
                         <img src={item.img} className="w-24 h-24 sm:w-32 sm:h-32 rounded-full m-2" alt="Image 1" />
-                        <span className='text-white flex justify-center'>{item.cafe}</span>
+                        <span className='text-white flex justify-center'>{item.cafe.substring(0, 10) + "..."}</span>
                     </div>
                 )) : <p className='m-2 text-white text-center'>No favourites yet</p>}
             </div>
