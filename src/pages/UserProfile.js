@@ -1,6 +1,6 @@
 import React from 'react'
 //Components
-import InputButton from '../components/InputButton'
+// import InputButton from '../components/InputButton'
 import ProductCard from '../components/ProductCard'
 import ImageGrid from '../components/ImageGrid'
 
