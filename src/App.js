@@ -7,10 +7,12 @@ import SearchPage from './pages/SearchPage';
 import Toolbar from './components/Toolbar';
 
 //Images 
-import Coffee1 from './images/coffee.jpg'
+import Coffee1 from './images/coffee4.jpg'
 import Coffee2 from './images/coffee1.jpg'
 import Coffee3 from './images/coffee2.jpg'
 import Coffee4 from './images/coffee3.jpg'
+import PeppermintMocha from './images/peppermint mocha frap.jpg'
+import PumpkinSpice from './images/pumpkin spice.jpg'
 
 
 function App() {
@@ -21,36 +23,52 @@ function App() {
   //Set image feed
   const [imageFeed, setImageFeed] = useState([
     {
-      type: 'peppermint Latte',
-      cafe: 'Starbucks', 
-      location: 'Barcelona',
-      price: '3',
-      img: Coffee1,
+      type: 'Coffee with Cream',
+      cafe: 'El Fornet', 
+      location: 'Eixample, Barcelona',
+      price: '2.50',
+      img: Coffee2,
       index: 1,
     },
     {
-      type: 'peppermint Latte',
-      cafe: '365',
-      location: 'Barcelona',
-      price: '3.50',
-      img: Coffee2,
+      type: 'Peppermint Mocha',
+      cafe: 'Starbucks',
+      location: 'Eixample, Barcelona',
+      price: '4.50',
+      img: PeppermintMocha,
       index: 2,
     },
     {
-      type: 'peppermint Latte',
-      cafe: 'Roast Club',
-      location: 'Barcelona',
+      type: 'Coffee with Milk',
+      cafe: 'Candela Canela',
+      location: 'Gracia, Barcelona',
       price: '2.50',
       img: Coffee3,
       index: 3,
     },
     {
-      type: 'peppermint Latte',
-      cafe: 'Nomad',
+      type: 'Coffee with Milk',
+      cafe: 'Roast Club',
       location: 'Barcelona',
       price: '2',
       img: Coffee4,
       index: 4,
+    },
+    {
+      type: 'Pumpkin Spiced Latte',
+      cafe: 'Starbucks',
+      location: 'Pg. de Gràcia, Barcelona',
+      price: '3',
+      img: PumpkinSpice,
+      index: 5,
+    },
+    {
+      type: 'Coffee with Milk',
+      cafe: 'Candela Canela',
+      location: 'Gracia, Barcelona',
+      price: '2.50',
+      img: Coffee1,
+      index: 6,
     },
   ])
 

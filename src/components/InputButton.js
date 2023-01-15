@@ -57,7 +57,7 @@ const handleFileSelect = (e) => {
 
   return (
     <div className='bg-neutral-900'>
-      <span className='fixed z-50 p-4 text-white'>Logo</span>
+      <span className='fixed z-50 p-4 text-white'>MyCoffeeJournal.</span>
       <div className='text-right fixed right-0 z-50'><AddCircleOutlineIcon sx={{fontSize: 35, strokeWidth: 4}} className='cursor-pointer bg-orange-300 h-14 rounded-3xl abso p-1 m-2' onClick={() => setDropdownVisible(!isDropdownVisible)} /></div>
       {isDropdownVisible && (
         <div className='flex flex-col bg-neutral-900 p-4 rounded-lg gap-2 fixed top-0 right-0 z-40'>
