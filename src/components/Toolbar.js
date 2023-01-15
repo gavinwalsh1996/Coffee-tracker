@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Toolbar = () => {
   return (
-    <div className="bg-neutral-900 text-orange-400 p-4 fixed bottom-0 w-full sm:w-0 flex justify-around sm:justify-start sm:border-t-0">
+    <div className="bg-neutral-900 text-amber-200 hover:text-amber-300 p-4 fixed bottom-0 w-full sm:w-0 flex justify-around sm:justify-start sm:border-t-0">
       <div className="flex justify-between">
         <div className="flex gap-12 sm:flex-col">
           <div className="px-2">

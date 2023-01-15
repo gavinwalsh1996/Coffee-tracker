@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import "@fontsource/syne"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
+// import LoginPage from './pages/LoginPage';
 import UserProfile from './pages/UserProfile'
 import SearchPage from './pages/SearchPage';
 import Toolbar from './components/Toolbar';
+import InputButton from './components/InputButton';
 
 //Images 
 import Coffee1 from './images/coffee4.jpg'
@@ -82,11 +83,17 @@ function App() {
   // Get items for favourites 
   function getItem (item) {
     setFavourites([...favourites, item])
+    setTimeout(() => {
+      alert("Post added to favourites!");
+      }, 1000);
   }
 
   // Remove from favourites
   function removeFavourite(item) {
     setFavourites(favourites.filter((fav => fav !== item)));
+    setTimeout(() => {
+      alert("Post removed from favourites!");
+      }, 1000);
   }
 
   //Handle file upload
@@ -98,6 +105,10 @@ function App() {
    function deletePost(item) {
      let newFeed = imageFeed.filter((post) => post !== item);
      setImageFeed(newFeed);
+
+     setTimeout(() => {
+      alert("Post deleted succesfully!");
+      }, 1000);
    }
 
   return (
@@ -107,9 +118,10 @@ function App() {
    
    <Router>
    <Toolbar />
+   <InputButton setImageFeed={setImageFeed} imageFeed={imageFeed} handleUpload={handleUpload} />
     <Routes>
-      <Route path='/' element={<LoginPage/>} />
-      <Route path='/profile' element={<UserProfile imageFeed={imageFeed} getItem={getItem} favourites={favourites} removeFavourite={removeFavourite} setImageFeed={setImageFeed} handleUpload={handleUpload} deletePost={deletePost}/> } />
+      {/* <Route path='/' element={<LoginPage/>} /> */}
+      <Route path='/' element={<UserProfile imageFeed={imageFeed} getItem={getItem} favourites={favourites} removeFavourite={removeFavourite} setImageFeed={setImageFeed} handleUpload={handleUpload} deletePost={deletePost}/> } />
       <Route path='/search' element={<SearchPage/>} />
     </Routes>
   </Router>

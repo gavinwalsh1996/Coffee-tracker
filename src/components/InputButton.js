@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 //Icons
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
@@ -57,15 +58,15 @@ const handleFileSelect = (e) => {
 
   return (
     <div className='bg-neutral-900'>
-      <span className='fixed z-50 p-4 text-white'>MyCoffeeJournal.</span>
-      <div className='text-right fixed right-0 z-50'><AddCircleOutlineIcon sx={{fontSize: 35, strokeWidth: 4}} className='cursor-pointer bg-orange-300 h-14 rounded-3xl abso p-1 m-2' onClick={() => setDropdownVisible(!isDropdownVisible)} /></div>
+      <Link to='/'><span className='fixed z-50 p-4 text-white cursor-pointer'>MyCoffeeJournal.</span></Link>
+      <div className='text-right fixed right-0 z-50'><AddCircleOutlineIcon sx={{fontSize: 35, strokeWidth: 4}} className='cursor-pointer bg-amber-200 hover:bg-amber-300 h-14 rounded-3xl abso p-1 m-2' onClick={() => setDropdownVisible(!isDropdownVisible)} /></div>
       {isDropdownVisible && (
         <div className='flex flex-col bg-neutral-900 p-4 rounded-lg gap-2 fixed top-0 right-0 z-40'>
 
         <h2 className='text-2xl font-medium mb-4 text-white'>Create Image</h2>
 
         <label htmlFor='image'>
-          <span className='text-white text-center'>Upload Image<AddAPhotoIcon className='mb-4 text-white'/></span>
+          <span className='text-white text-center cursor-pointer hover:text-amber-300'>Upload Image<AddAPhotoIcon className='mb-4 text-white'/></span>
           <input type='file' name='image' id='image' style={{display: 'none'}} onChange={handleFileSelect}/>
         </label>
 
@@ -99,8 +100,8 @@ const handleFileSelect = (e) => {
           />
         
             <span className='text-center'>
-                <button onClick={() => clearInputs()} className='bg-gray-500 text-white p-2 rounded-lg mr-2'>Clear</button>
-                <button onClick={() => uploadImage()} className='bg-orange-300 text-white p-2 rounded-lg'>Publish</button>
+                <button onClick={() => clearInputs()} className='bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-lg mr-2'>Clear</button>
+                <button onClick={() => uploadImage()} className='bg-amber-200 hover:bg-amber-300 text-black p-2 rounded-lg'>Publish</button>
             </span>
 
         </div>

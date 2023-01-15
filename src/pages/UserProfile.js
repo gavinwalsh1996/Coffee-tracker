@@ -11,7 +11,7 @@ function userProfile({imageFeed, getItem, favourites, removeFavourite, setImageF
   return (
 
     <div className='bg-neutral-900'>
-      <InputButton setImageFeed={setImageFeed} imageFeed={imageFeed} handleUpload={handleUpload} />
+      {/* <InputButton setImageFeed={setImageFeed} imageFeed={imageFeed} handleUpload={handleUpload} /> */}
       {/* <ImageCard /> */}
       <div className='flex flex-col'>
       <ImageGrid favourites={favourites} />
