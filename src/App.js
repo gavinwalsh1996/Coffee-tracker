@@ -114,16 +114,14 @@ function App() {
   return (
    <>
 
-   {/* <Toolbar /> */}
-   
    <Router>
-   <Toolbar />
-   <InputButton setImageFeed={setImageFeed} imageFeed={imageFeed} handleUpload={handleUpload} />
-    <Routes>
-      {/* <Route path='/' element={<LoginPage/>} /> */}
-      <Route path='/' element={<UserProfile imageFeed={imageFeed} getItem={getItem} favourites={favourites} removeFavourite={removeFavourite} setImageFeed={setImageFeed} handleUpload={handleUpload} deletePost={deletePost}/> } />
-      <Route path='/search' element={<SearchPage/>} />
-    </Routes>
+    <Toolbar />
+    <InputButton setImageFeed={setImageFeed} imageFeed={imageFeed} handleUpload={handleUpload} />
+      <Routes>
+        {/* <Route path='/' element={<LoginPage/>} /> */}
+        <Route path='/' element={<UserProfile imageFeed={imageFeed} getItem={getItem} favourites={favourites} removeFavourite={removeFavourite} setImageFeed={setImageFeed} handleUpload={handleUpload} deletePost={deletePost}/> } />
+        <Route path='/search' element={<SearchPage/>} />
+      </Routes>
   </Router>
    
    </>
