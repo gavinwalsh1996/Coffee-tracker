@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import HomeIcon from '@mui/icons-material/Home';
+// import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -10,7 +10,7 @@ const Toolbar = () => {
       <div className="flex justify-between">
         <div className="flex gap-12 sm:flex-col">
           <div className="px-2">
-            <a href="#"><HomeIcon /></a>
+            {/* <a href="#"><HomeIcon /></a> */}
           </div>
           <div className="px-2">
           <Link to='/search'><SearchIcon /></Link>
